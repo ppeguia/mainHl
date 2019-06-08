@@ -1,0 +1,16 @@
+<header>
+	<div class="navbar">
+	  <a [routerLink]="['/home']"  routerLinkActive="active">Home</a>
+	  <a [routerLink]="['/about']"  routerLinkActive="active">Sobre Nosotors</a>
+	  <a id="logo" [routerLink]="['/']" routerLinkActive="active">Hermano y Libertad A. C.</a>
+	  <a [routerLink]="['/proyects']"  routerLinkActive="active">Proyectos</a>
+	  <a [routerLink]="['/contact']"  routerLinkActive="active">Contacto</a>
+	</div>
+</header>
+<section class="contenido" >
+	<router-outlet></router-outlet>	
+</section>
+
+<footer>
+	<app-foot></app-foot>
+</footer>

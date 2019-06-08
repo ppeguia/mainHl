@@ -1,0 +1,160 @@
+/*Importar fuentes custom*/
+@font-face{
+  font-family: 'Cairo';
+  src: url("fonts/Cairo-Regular.ttf");
+}
+@font-face{
+  font-family: 'Fira Sans';
+  src: url("fonts/FiraSans-Regular.ttf");
+}
+@font-face{
+  font-family: 'Staatliches';
+  src: url("fonts/Staatliches-Regular.ttf");
+}
+/*Generales*/
+*{
+  margin: 0px;
+  padding: 0px;
+}
+
+body{
+  background-color: white;
+  font-family: 'Fira Sans', sans-serif;
+  font-size: 20px;
+  background-attachment: fixed;
+}
+
+.clearfix{
+  float: none;
+  clear: both;
+}
+
+/*Estilos Barra de navegacion*/
+header{
+  display: block;
+  width: 40%;
+  height: 50px;
+  background-color: rgb(184, 134, 11, 0.8); 
+  position: fixed;
+  margin-left: 30%;
+}
+
+
+.navbar {
+  display: block;
+  height: 50px;
+  margin: 0px auto;
+  text-align: center;
+}
+
+.navbar a {
+  font-family: 'Cairo', sans-serif;
+  font-family: 'Staatliches', cursive;
+  display: block;
+  margin: 0px auto;
+  float: left;  
+  color: white;
+  text-align: center;
+  line-height: 25px;
+  padding: 15px 15px;
+  text-decoration: none;
+  font-size: 20px;
+  transition: all 300ms;
+}
+
+.navbar a:hover {
+  background: rgb(0, 0, 0, 0.6); 
+}
+
+#logo {
+  background: transparent; 
+}
+
+/*Home imagen*/
+.organizacion {
+    min-width: 100%;
+    min-height: 100%;
+	  width: 100%;
+    height: 700px;
+  	background: url("../../assets/img/fondo1.jpeg") no-repeat center center fixed;
+    background-size: cover;
+  	background-position: 50% 50% 50% 50%;
+    vertical-align: middle;
+}
+
+div.organizacion section {
+    margin: 0;
+    color: white;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    margin-right: -50%;
+    transform: translate(-50%, -50%) 
+}
+
+div.organizacion h2{
+	text-align: center;
+	font-family: 'Cairo', sans-serif;
+	font-size: 80px;
+	text-shadow: 2px 2px DarkGoldenrod;
+}
+
+div.organizacion p{
+	text-align: center;
+	font-family: 'Fira Sans', sans-serif;
+	font-size: 50px;
+	text-shadow: 2px 2px DarkGoldenrod;
+}
+
+div.organizacion hr{
+ 	  border: 5px solid DarkGoldenrod;
+  	border-radius: 10px;
+}
+
+/*Contenido incial*/
+.wrapper {
+  display: grid;
+  grid-template-columns: repeat(7, 1fr);
+  grid-gap: 10px;
+  grid-auto-rows: minmax(auto, auto);
+  padding: 10px,10px,10px,10px;
+}
+
+.oneGrid {
+  grid-column: 2/4;
+  grid-row: 1;
+}
+
+.twoGrid {
+  grid-column: 5/6;
+  grid-row: 1;
+}
+
+.threeGrid {
+  grid-column: 5/7;
+  grid-row: 1;
+}
+/*Pie de pagina*/
+.foot{
+  background-color: DarkGoldenrod;
+  padding: 30px;
+}
+
+.foot h2{
+  color: white;
+  text-align: center;
+  font-family: 'Cairo', sans-serif;
+  font-size: 20px;
+}
+.foot p{
+  color: white;
+  text-align: justify;
+  font-size: 13px;
+}
+.foot a{
+  color: white;
+  font-family: 'Cairo', sans-serif;
+  font-family: 'Staatliches', cursive;
+  text-decoration: none;
+  font-size: 20px;
+}

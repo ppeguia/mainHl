@@ -1,0 +1,19 @@
+.navbar {
+  font-family: 'Cairo', sans-serif;
+  font-family: 'Staatliches', cursive;
+  overflow: hidden;
+  background-color: DarkGoldenrod;
+  position: fixed;
+  top: 0;
+  width: 100%;
+}
+
+.navbar a {
+  float: left;
+  display: block;
+  color: white;
+  text-align: center;
+  padding: 14px 16px;
+  text-decoration: none;
+  font-size: 17px;
+}
