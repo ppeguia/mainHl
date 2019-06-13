@@ -1,5 +1,7 @@
 import { BrowserModule } from '@angular/platform-browser';
 import { NgModule } from '@angular/core';
+import { HttpClientModule } from '@angular/common/http';
+import { FormsModule } from '@angular/forms';
 
 //import { AppRoutingModule } from './app-routing.module';
 import { routing, appRoutinProviders } from './app-routing.module';
@@ -10,7 +12,6 @@ import { ContactComponent } from './components/contact/contact.component';
 import { ProyectoComponent } from './components/proyecto/proyecto.component';
 import { ErrorpagComponent } from './components/errorpag/errorpag.component';
 import { FootComponent } from './components/foot/foot.component';
-
 
 
 @NgModule({
@@ -25,7 +26,9 @@ import { FootComponent } from './components/foot/foot.component';
   ],
   imports: [
     BrowserModule,
-    routing
+    routing,
+    HttpClientModule,
+    FormsModule
     //,AppRoutingModule
   ],
   providers: [
