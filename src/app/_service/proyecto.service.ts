@@ -18,4 +18,10 @@ export class ProyectoService {
   testService():string {
     return "Provando el servicio";
   }
+
+  save(proyecto:Proyecto):Observable<any> {
+    let params = JSON.stringify(proyecto);
+    let headers = new HttpHeaders().set('Content-Type','application/json');
+    return this._http.post(this.url+'/proyecto',params,{ 'headers': headers});
+  }
 }

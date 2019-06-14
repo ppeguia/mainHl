@@ -1,11 +1,45 @@
-<di class="contenedor">
+<div class="contenedor">
   <h2>{{title}}</h2>
+  <div class="mensaje succes" *ngIf="status == 'suscess'">
+    El proyecto se ha creado correctamente, puedes consultarlo <a href="#">aqui</a>
+  </div>
+  <div class="mensaje failed" *ngIf="status == 'failed'">
+    El proyecto no se ha podido crear
+  </div>
   <form #proyetoForm="ngForm" (ngSubmit)="onSubmit(proyetoForm)" >
     <p>
-      <label>
-        
-      </label>
+      <label for="nombre">Nombre</label>
+      <input type="text" name="nombre" #nombre="ngModel" [(ngModel)]="proyecto.nombre" required/>
+      <span class="form_error" *ngIf="nombre.touched && !nombre.valid">
+       <br>El nombre es obligatorio.
+      </span>
     </p>
-
+    <p>  
+      <label for="descripcion">Descripcion</label>
+      <textarea name="descripcion" #descripcion="ngModel" [(ngModel)]="proyecto.descripcion" required></textarea>
+      <span class="form_error" *ngIf="descripcion.touched && !descripcion.valid">
+        <br>La descripcion es obligatoria.
+      </span>
+    </p><p>  
+      <label for="categoria">Categoria</label>
+      <input type="text" name="categoria" #categoria="ngModel" [(ngModel)]="proyecto.categoria" required/>
+      <span class="form_error" *ngIf="categoria.touched && !categoria.valid">
+        <br>La categoria es obligatoria.
+      </span>
+    </p><p>  
+      <label for="lenguaje">Lenguaje</label>
+      <input type="text" name="lenguaje" #lenguaje="ngModel" [(ngModel)]="proyecto.lenguaje" required/>
+      <span class="form_error" *ngIf="lenguaje.touched && !lenguaje.valid">
+        <br>El lenguaje es obligatorio.
+      </span>
+    </p><p>  
+      <label for="anio">Año de lanzamiento</label>
+      <input type="number" name="anio" #anio="ngModel" [(ngModel)]="proyecto.anio" />
+    </p><p>
+      <label for="imagen" class="imagen">Imagen</label>
+      <input class="imagen" type="file" name="imagen" #imagen="ngModel" [(ngModel)]="proyecto.imagen"/>
+    </p><p>
+      <input type="submit" value="Enviar" [disabled]="!proyetoForm.form.valid" />
+  </p>
   </form>
-</di>
+</div>
