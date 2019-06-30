@@ -24,7 +24,6 @@ export class AboutComponent implements OnInit {
   getProyectos(){
     this._proyectoService.getProyectos().subscribe(
       response =>{
-        console.log(response);
         if(response.proyectos){
           this.proyectos = response.proyectos;
         }else{

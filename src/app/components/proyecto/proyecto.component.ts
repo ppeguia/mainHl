@@ -34,10 +34,9 @@ export class ProyectoComponent implements OnInit {
           /**Subir la imagen */
           this.uploadService.makeFileRequest(Global.url+"proyecto/img/"+respose.proyecto._id,[],this.filesToUpload, 'imagen' )
               .then((result:any)=>{
-                this.save_project = result;
+                this.save_project = result.proyecto;
                 this.status = 'suscess';
                 form.reset();
-                console.log("Succes:"+result);
           });
         }else{
           this.status = 'failed';
