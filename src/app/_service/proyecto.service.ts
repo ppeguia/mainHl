@@ -24,4 +24,14 @@ export class ProyectoService {
     let headers = new HttpHeaders().set('Content-Type','application/json');
     return this._http.post(this.url+'/proyecto',params,{ 'headers': headers});
   }
+
+  getProyectos(): Observable<any> {
+    let headers = new HttpHeaders().set('Content-Type','application/json');
+    return this._http.get(this.url+'proyectos',{ 'headers': headers});
+  }
+
+  getProyectoId(Id:string): Observable<any>{
+    let headers = new HttpHeaders().set('Content-Type','application/json');
+    return this._http.get(this.url+'proyecto/'+Id,{ 'headers': headers});
+  }
 }

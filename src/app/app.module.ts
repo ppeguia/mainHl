@@ -12,6 +12,7 @@ import { ContactComponent } from './components/contact/contact.component';
 import { ProyectoComponent } from './components/proyecto/proyecto.component';
 import { ErrorpagComponent } from './components/errorpag/errorpag.component';
 import { FootComponent } from './components/foot/foot.component';
+import { DetallesComponent } from './components/detalles/detalles.component';
 
 
 @NgModule({
@@ -22,7 +23,8 @@ import { FootComponent } from './components/foot/foot.component';
     ContactComponent,
     ProyectoComponent,
     ErrorpagComponent,
-    FootComponent
+    FootComponent,
+    DetallesComponent
   ],
   imports: [
     BrowserModule,

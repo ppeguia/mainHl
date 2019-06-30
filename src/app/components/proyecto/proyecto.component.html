@@ -1,7 +1,7 @@
 <div class="contenedor">
   <h2>{{title}}</h2>
   <div class="mensaje succes" *ngIf="status == 'suscess'">
-    El proyecto se ha creado correctamente, puedes consultarlo <a href="#">aqui</a>
+    El proyecto se ha creado correctamente, puedes consultarlo <a [routerLink]="['/proyecto',save_project._id']">aqui</a>
   </div>
   <div class="mensaje failed" *ngIf="status == 'failed'">
     El proyecto no se ha podido crear
@@ -37,7 +37,7 @@
       <input type="number" name="anio" #anio="ngModel" [(ngModel)]="proyecto.anio" />
     </p><p>
       <label for="imagen" class="imagen">Imagen</label>
-      <input class="imagen" type="file" name="imagen" #imagen="ngModel" [(ngModel)]="proyecto.imagen"/>
+      <input class="imagen" type="file" name="imagen" (change)="fileChangeEvent($event)" />
     </p><p>
       <input type="submit" value="Enviar" [disabled]="!proyetoForm.form.valid" />
   </p>

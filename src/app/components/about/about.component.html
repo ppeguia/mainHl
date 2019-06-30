@@ -1,12 +1,13 @@
-<p>
-  1 about works!
-</p>
-<p>
-  1 about works!
-</p>
-<p>
-  1 about works!
-</p>
-<p>
-  1 about works!
-</p>
+<div class="contenedor" >
+  <h2>Projectos</h2>
+
+  <ul class="project">
+    <li *ngFor="let proyecto of proyectos">
+      <a [routerLink]="['/proyecto', proyecto._id]">
+        <div class="mask"><img src="{{url+'get-image/'+proyecto.imagen}}" *ngIf="proyecto.imagen"></div>
+        <h3>{{proyecto.nombre}}</h3> 
+        <p>{{proyecto.descripcion}} - {{proyecto.anio}} - {{proyecto.imagen}}</p>
+      </a>
+    </li>  
+  </ul>
+</div> 
