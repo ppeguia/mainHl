@@ -30,8 +30,20 @@ export class ProyectoService {
     return this._http.get(this.url+'proyectos',{ 'headers': headers});
   }
 
-  getProyectoId(Id:string): Observable<any>{
+  getProyectoId(id:string): Observable<any>{
     let headers = new HttpHeaders().set('Content-Type','application/json');
-    return this._http.get(this.url+'proyecto/'+Id,{ 'headers': headers});
+    return this._http.get(this.url+'proyecto/'+id,{ 'headers': headers});
   }
+
+  deleteProyectoId(id:string): Observable<any>{
+    let headers = new HttpHeaders().set('Content-Type','application/json');
+    return this._http.delete(this.url+'proyecto/'+id,{ 'headers': headers});
+  }
+
+  updateProyectoId(proyecto:Proyecto): Observable<any>{
+    let params = JSON.stringify(proyecto);
+    let headers = new HttpHeaders().set('Content-Type','application/json');
+    return this._http.put(this.url+'/proyecto',params,{ 'headers': headers});
+  }
+
 }

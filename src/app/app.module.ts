@@ -13,6 +13,7 @@ import { ProyectoComponent } from './components/proyecto/proyecto.component';
 import { ErrorpagComponent } from './components/errorpag/errorpag.component';
 import { FootComponent } from './components/foot/foot.component';
 import { DetallesComponent } from './components/detalles/detalles.component';
+import { EditarProjectoComponent } from './components/editar-projecto/editar-projecto.component';
 
 
 @NgModule({
@@ -24,7 +25,8 @@ import { DetallesComponent } from './components/detalles/detalles.component';
     ProyectoComponent,
     ErrorpagComponent,
     FootComponent,
-    DetallesComponent
+    DetallesComponent,
+    EditarProjectoComponent
   ],
   imports: [
     BrowserModule,

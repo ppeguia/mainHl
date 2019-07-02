@@ -36,4 +36,15 @@ export class DetallesComponent implements OnInit {
     });
   }
 
+  deleteProjecto(id:string){
+    this._proyectoService.deleteProyectoId(id).subscribe(
+      response =>{
+        this._router.navigate(['/about']);
+        console.log(response);
+      }, error =>{
+        console.log(<any>error);
+      }
+    );
+  }
+
 }

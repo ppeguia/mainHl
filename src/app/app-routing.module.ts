@@ -8,7 +8,7 @@ import { ContactComponent } from './components/contact/contact.component';
 import { ProyectoComponent } from './components/proyecto/proyecto.component';
 import { DetallesComponent } from './components/detalles/detalles.component';
 import { ErrorpagComponent } from './components/errorpag/errorpag.component';
-
+import { EditarProjectoComponent } from './components/editar-projecto/editar-projecto.component';
 
 const routes: Routes = [
 	{path: '', component: HomeComponent},
@@ -17,6 +17,7 @@ const routes: Routes = [
 	{path: 'contact', component: ContactComponent},
 	{path: 'proyects', component: ProyectoComponent},
 	{path: 'proyecto/:id', component: DetallesComponent},
+	{path: 'editproy/:id', component: EditarProjectoComponent},
 	{path: '**', component: ErrorpagComponent},
 ];
 
